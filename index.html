@@ -1,244 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naduka - Web Developer & UI/UX Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
 
-        <link rel="stylesheet" href="assets/css/styles.css">
-
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
-        <title>Portfolio website complete</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Naduka</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">
+                    <span class="logo-text">NADUKA</span>
+                    <span class="logo-dot"></span>
+                </a>
+                <div class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
                 </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Naduka</span><br> Web Designer <br> UI/UX Designer </h1>
-                    
-
-                    <a href="#contact" class="button">Contact</a>
-                    <a href="assets/cv/updated cv.pdf" class="button" download>Download CV</a>
-                </div>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/naduka-kawya-a8b1a3178/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.instagram.com/___justinx/" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
-                    <a href="https://github.com/nanayakkara09" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="-100" y="-150" href="assets/img/profile.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Naduka</h2>
-                        <p class="about__text">a passionate Web Developer, UI/UX Designer, Full-Stack Developer, and WordPress Developer. I specialize in building modern, responsive websites, web applications, and intuitive user interfaces that enhance user experience.
-                            With expertise in front-end and back-end development, WordPress customization, and UI/UX design, I create seamless and functional digital solutions. I’m always exploring new technologies to improve my skills and stay ahead in the industry.
-                            Let’s connect and build something amazing!</p>           
-                    </div>                                   
-                </div>
-            </section>
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">A passionate Web Developer, UI/UX Designer, Full-Stack Developer, and WordPress Developer with a strong focus on creating modern, user-friendly, and efficient digital experiences.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div> <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">WORDPRESS</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">My Works</h2>
-
-                <div class="work__container bd-grid">
-                    <div class="work__item">
-                        <a href="https://www.linkedin.com/posts/naduka-kawya-a8b1a3178_webdevelopment-wordpress-ecommerce-activity-7221050957432807425-eyLF?utm_source=share&utm_medium=member_desktop" class="work__img">
-                            <img src="assets/img/p1.jpg" href="">
-                        </a>
-                        <p>Wordpress mobile shop web</p>
-                    </div>
-                
-                    <div class="work__item">
-                        <a href="https://www.linkedin.com/posts/naduka-kawya-a8b1a3178_tmart-fashionforward-onlineshopping-activity-7165197770042142722-a5Js?utm_source=share&utm_medium=member_desktop" class="work__img">
-                            <img src="assets/img/p2.jpg" alt="">
-                        </a>
-                        <p>wordpress clothing shop web</p>
-                    </div>
-                
-                    <div class="work__item">
-                        <a href="https://www.linkedin.com/posts/naduka-kawya-a8b1a3178_travelblog-selflearning-wordpress-activity-7158326766359433216-22Jx?utm_source=share&utm_medium=member_desktop" class="work__img">
-                            <img src="assets/img/p3.jpg" alt="">
-                        </a>
-                        <p>Blog web using wordpress</p>
-                    </div>
-                
-                    <div class="work__item">
-                        <a href="https://github.com/nanayakkara09/Music-web-UI" class="work__img">
-                            <img src="assets/img/Music web UI (1).png" alt="">
-                        </a>
-                        <p>Music Web UI</p>
-                    </div>
-                
-                    <div class="work__item">
-                        <a href="https://github.com/nanayakkara09/ITP-Project" class="work__img">
-                            <img src="assets/img/p4.jpg" alt=""><br>
-                        </a>
-                        <p>Fullstack Food ordering webapp</p>
-                    </div>
-                
-                    <div class="work__item">
-                        <a href="https://github.com/nanayakkara09/Taxi-servce" class="work__img">
-                            <img src="assets/img/p6.jpg" alt="">
-                        </a>
-                        <p>online taxi service webapp</p>
-                    </div>
-                </div>
-                
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Naduka</p>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/profile.php?id=100008838306996" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="https://www.instagram.com/___justinx/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <p class="footer__copy">&#169; naduka-kawya. All rigths reserved</p>
-        </footer>
+        </div>
+    </nav>
 
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Naduka</h1>
+            <h2>Web Developer & UI/UX Designer</h2>
+            <p>Creating modern digital experiences with clean code and intuitive design</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="images/profile.png" alt="Naduka Kawya">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h2>About Me</h2>
+                    <p>I'm a passionate Web Developer, UI/UX Designer, Full-Stack Developer, and WordPress Developer with a strong focus on creating beautiful and functional websites. I love turning complex problems into simple, beautiful, and intuitive designs.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h3>Education</h3>
+                                <p>BSc in Information Technology</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h3>Experience</h3>
+                                <p>3+ Years in Web Development</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Sri Lanka</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/naduka-kawya-a8b1a3178/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/nanayakkara09" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/___justinx/" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="about-buttons">
+                        <a href="#" class="btn btn-primary">Download CV</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
-</html>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wordpress">WordPress</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="ui">UI Design</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="wordpress" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="images/p1.jpg" alt="WordPress Mobile Shop">
+                    </div>
+                    <div class="project-info">
+                        <h3>WordPress Mobile Shop</h3>
+                        <p>A responsive e-commerce website for mobile devices built with WordPress.</p>
+                        <div class="project-tags">
+                            <span>WordPress</span>
+                            <span>WooCommerce</span>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="wordpress" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="images/p2.jpg" alt="WordPress Clothing Shop">
+                    </div>
+                    <div class="project-info">
+                        <h3>WordPress Clothing Shop</h3>
+                        <p>A modern fashion e-commerce platform with advanced product filtering.</p>
+                        <div class="project-tags">
+                            <span>WordPress</span>
+                            <span>WooCommerce</span>
+                            <span>Fashion</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="wordpress" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="images/p3.jpg" alt="WordPress Blog">
+                    </div>
+                    <div class="project-info">
+                        <h3>WordPress Blog</h3>
+                        <p>A feature-rich blog platform with custom post types and categories.</p>
+                        <div class="project-tags">
+                            <span>WordPress</span>
+                            <span>Blog</span>
+                            <span>CMS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ui" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="images/Music web UI (1).png" alt="Music Web UI">
+                    </div>
+                    <div class="project-info">
+                        <h3>Music Web UI</h3>
+                        <p>A modern and intuitive music streaming interface design.</p>
+                        <div class="project-tags">
+                            <span>UI Design</span>
+                            <span>Music</span>
+                            <span>Modern</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="images/p4.jpg" alt="Food Ordering Webapp">
+                    </div>
+                    <div class="project-info">
+                        <h3>Fullstack Food Ordering Webapp</h3>
+                        <p>A complete food delivery platform with real-time order tracking.</p>
+                        <div class="project-tags">
+                            <span>Fullstack</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="images/p6.jpg" alt="Taxi Service Webapp">
+                    </div>
+                    <div class="project-info">
+                        <h3>Online Taxi Service Webapp</h3>
+                        <p>A comprehensive taxi booking platform with real-time tracking.</p>
+                        <div class="project-tags">
+                            <span>Fullstack</span>
+                            <span>MERN</span>
+                            <span>Real-time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skill-item" data-aos="fade-up">
+                    <div class="skill-info">
+                        <h3>HTML5</h3>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress-bar" data-progress="95"></div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-info">
+                        <h3>CSS3</h3>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar" data-progress="85"></div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-info">
+                        <h3>JAVASCRIPT</h3>
+                        <span>65%</span>
+                    </div>
+                    <div class="progress-bar" data-progress="65"></div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-info">
+                        <h3>UX/UI</h3>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar" data-progress="85"></div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-info">
+                        <h3>WORDPRESS</h3>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar" data-progress="80"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>kawyanvvw@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+94 75 55 45 863</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">NADUKA</a>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/naduka-kawya-a8b1a3178/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/nanayakkara09" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/___justinx/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Naduka Kawya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
