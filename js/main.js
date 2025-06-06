@@ -1,3 +1,72 @@
+// Create and animate stars
+function createStars() {
+    const starsContainer = document.createElement('div');
+    starsContainer.className = 'stars';
+    document.body.appendChild(starsContainer);
+
+    // Create 200 stars
+    for (let i = 0; i < 200; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        
+        // Random position
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        
+        // Random size between 1px and 3px
+        const size = Math.random() * 2 + 1;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        
+        // Random animation duration between 1s and 3s
+        const duration = Math.random() * 2 + 1;
+        star.style.setProperty('--duration', `${duration}s`);
+        
+        // Random delay
+        star.style.animationDelay = `${Math.random() * 2}s`;
+        
+        starsContainer.appendChild(star);
+    }
+}
+
+// Create hero stars
+function createHeroStars() {
+    const heroSection = document.querySelector('.hero');
+    const heroStarsContainer = document.createElement('div');
+    heroStarsContainer.className = 'hero-stars';
+    heroSection.appendChild(heroStarsContainer);
+
+    // Create 50 special hero stars
+    for (let i = 0; i < 50; i++) {
+        const star = document.createElement('div');
+        star.className = 'hero-star';
+        
+        // Random position
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        
+        // Random size between 2px and 4px
+        const size = Math.random() * 2 + 2;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        
+        // Random animation duration between 2s and 4s
+        const duration = Math.random() * 2 + 2;
+        star.style.setProperty('--duration', `${duration}s`);
+        
+        // Random delay
+        star.style.animationDelay = `${Math.random() * 3}s`;
+        
+        heroStarsContainer.appendChild(star);
+    }
+}
+
+// Initialize stars when page loads
+window.addEventListener('load', () => {
+    createStars();
+    createHeroStars();
+});
+
 // Initialize AOS (Animate On Scroll)
 AOS.init({
     duration: 1000,
