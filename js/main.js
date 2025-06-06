@@ -260,10 +260,15 @@ projectCards.forEach(card => {
     });
 });
 
+// Initialize EmailJS
+(function() {
+    emailjs.init("Huhq3ausmMUZzPBJC");
+})();
+
 // Form Validation and Submission
 const contactForm = document.querySelector('.contact-form');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
     const name = document.getElementById('name').value;
@@ -271,28 +276,64 @@ contactForm.addEventListener('submit', (e) => {
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
 
-    // Add your form submission logic here
-    console.log('Form submitted:', { name, email, subject, message });
-    
-    // Show success message
-    const successMessage = document.createElement('div');
-    successMessage.className = 'success-message';
-    successMessage.innerHTML = `
-        <i class="fas fa-check-circle"></i>
-        <span>Message sent successfully!</span>
-    `;
-    contactForm.appendChild(successMessage);
+    // Show loading state
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitButton.disabled = true;
 
-    // Clear form
-    contactForm.reset();
+    try {
+        // Send email using EmailJS
+        await emailjs.send('service_dlyyiqr', 'template_rg8y413', {
+            to_email: 'kawyanvvw@gmail.com',
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message
+        });
 
-    // Remove success message after 3 seconds
-    setTimeout(() => {
-        successMessage.classList.add('fade-out');
+        // Show success message
+        const successMessage = document.createElement('div');
+        successMessage.className = 'success-message';
+        successMessage.innerHTML = `
+            <i class="fas fa-check-circle"></i>
+            <span>Message sent successfully!</span>
+        `;
+        contactForm.appendChild(successMessage);
+
+        // Clear form
+        contactForm.reset();
+
+        // Remove success message after 3 seconds
         setTimeout(() => {
-            successMessage.remove();
-        }, 300);
-    }, 3000);
+            successMessage.classList.add('fade-out');
+            setTimeout(() => {
+                successMessage.remove();
+            }, 300);
+        }, 3000);
+    } catch (error) {
+        console.error('EmailJS Error:', error);
+        // Show error message
+        const errorMessage = document.createElement('div');
+        errorMessage.className = 'error-message';
+        errorMessage.innerHTML = `
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Failed to send message. Please try again.</span>
+        `;
+        contactForm.appendChild(errorMessage);
+
+        // Remove error message after 3 seconds
+        setTimeout(() => {
+            errorMessage.classList.add('fade-out');
+            setTimeout(() => {
+                errorMessage.remove();
+            }, 300);
+        }, 3000);
+    } finally {
+        // Reset button state
+        submitButton.innerHTML = originalButtonText;
+        submitButton.disabled = false;
+    }
 });
 
 // Add CSS for lightbox and success message
